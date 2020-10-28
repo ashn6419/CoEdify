@@ -1,0 +1,50 @@
+﻿@model DomainModels.Entities.UserLogin
+@{
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+
+<!-- /.login-logo -->
+
+<p class="login-box-msg" style="color:darkorange">Sign In <span style="color:midnightblue">to start your session</span></p>
+<form asp-action="Login">
+    <div asp-validation-summary="ModelOnly" class="danger"></div>
+    <div class="form-group has-feedback">
+        @*<input type="email" class="form-control" name="userid" required placeholder="Email">*@
+        <input asp-for="UserEmail" class="form-control" />
+        <span asp-validation-for="UserEmail" class="text-danger"></span>
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+
+    </div>
+    <div class="form-group has-feedback">
+        <input type="password" asp-for="Password" class="form-control" />
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <div class="row">
+        <!-- /.col -->
+        <div class="col-xs-6 pull-left">
+            <span style="color:midnightblue">New User ?</span> <a href="@Url.Action("Register","Account")" style=" color:darkorange" class="text-center">Register</a>
+
+        </div>
+        <div class="col-xs-4 pull-right">
+            <input type="submit" value="Login" class="btn btn-primary btn-block btn-flat" />
+            <br>
+        </div>
+
+        <!-- /.col -->
+    </div>
+  
+
+
+</form>
+
+
+<hr />
+<div class="clearfix"></div>
+<div style="text-align:center">
+    <a href="@Url.Action("ForgetPassowrd","Account")"><span style="color:midnightblue">Forgot </span>Password</a>
+    <br />
+</div>
+
+
+
