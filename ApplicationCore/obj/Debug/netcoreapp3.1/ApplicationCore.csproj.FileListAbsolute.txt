@@ -16,3 +16,12 @@ H:\coEdifyProjects\CEdashboard\ApplicationCore\obj\Debug\netcoreapp3.1\Applicati
 H:\coEdifyProjects\CEdashboard\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.dll
 H:\coEdifyProjects\CEdashboard\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.pdb
 H:\coEdifyProjects\CEdashboard\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.csprojAssemblyReference.cache
+H:\CodeRepo\ApplicationCore\bin\Debug\netcoreapp3.1\ApplicationCore.deps.json
+H:\CodeRepo\ApplicationCore\bin\Debug\netcoreapp3.1\ApplicationCore.dll
+H:\CodeRepo\ApplicationCore\bin\Debug\netcoreapp3.1\ApplicationCore.pdb
+H:\CodeRepo\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.csprojAssemblyReference.cache
+H:\CodeRepo\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.AssemblyInfoInputs.cache
+H:\CodeRepo\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.AssemblyInfo.cs
+H:\CodeRepo\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.csproj.CoreCompileInputs.cache
+H:\CodeRepo\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.dll
+H:\CodeRepo\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.pdb
