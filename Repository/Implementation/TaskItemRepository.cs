@@ -37,8 +37,8 @@ namespace Repository.Implementation
                                 taskItem.TaskItemId = Convert.ToInt32(reader["TaskItemId"]);
                                 if (reader["TaskId"] != DBNull.Value)
                                     taskItem.TaskId = Convert.ToInt32(reader["TaskId"]);
-                                if (reader["Item"] != DBNull.Value)
-                                    taskItem.Item = Convert.ToString(reader["Item"]);
+                                if (reader["Description"] != DBNull.Value)
+                                    taskItem.TaskDescription = Convert.ToString(reader["Description"]);
                                 if (reader["IsComplete"] != DBNull.Value)
                                     taskItem.IsComplete = Convert.ToBoolean(reader["IsComplete"]);
                                 if (reader["CreatedDate"] != DBNull.Value)
@@ -88,8 +88,8 @@ namespace Repository.Implementation
                                 taskItem.TaskItemId = Convert.ToInt32(reader["TaskItemId"]);
                                 if (reader["TaskId"] != DBNull.Value)
                                     taskItem.TaskId = Convert.ToInt32(reader["TaskId"]);
-                                if (reader["Item"] != DBNull.Value)
-                                    taskItem.Item = Convert.ToString(reader["Item"]);
+                                if (reader["Description"] != DBNull.Value)
+                                    taskItem.TaskDescription = Convert.ToString(reader["Description"]);
                                 if (reader["IsComplete"] != DBNull.Value)
                                     taskItem.IsComplete = Convert.ToBoolean(reader["IsComplete"]);
                                 if (reader["CreatedDate"] != DBNull.Value)
@@ -138,16 +138,14 @@ namespace Repository.Implementation
                                     taskItem.TaskItemId = Convert.ToInt32(reader["TaskItemId"]);
                                 if (reader["TaskId"] != DBNull.Value)
                                     taskItem.TaskId = Convert.ToInt32(reader["TaskId"]);
-                                if (reader["Item"] != DBNull.Value)
-                                    taskItem.Item = Convert.ToString(reader["Item"]);
+                                if (reader["Description"] != DBNull.Value)
+                                    taskItem.TaskDescription = Convert.ToString(reader["Description"]);
                                 if (reader["IsComplete"] != DBNull.Value)
                                     taskItem.IsComplete = Convert.ToBoolean(reader["IsComplete"]);
                                 if (reader["CreatedDate"] != DBNull.Value)
                                     taskItem.CreatedDate = Convert.ToDateTime(reader["CreatedDate"]);
                                 if (reader["ModifiedDate"] != DBNull.Value)
                                     taskItem.ModifiedDate = Convert.ToDateTime(reader["ModifiedDate"]);
-
-
                             }
                         }
                     }
@@ -177,12 +175,13 @@ namespace Repository.Implementation
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     cmd.Parameters.AddWithValue("@TaskId", taskItem.TaskId);
-                    cmd.Parameters.AddWithValue("@Item", taskItem.Item);
+                    cmd.Parameters.AddWithValue("@Description", taskItem.TaskDescription);
                     cmd.Parameters.AddWithValue("@IsComplete", taskItem.IsComplete);
                     cmd.Parameters.AddWithValue("@CreatedDate", taskItem.CreatedDate);
+                    cmd.Parameters.AddWithValue("@UserId", taskItem.UserId);
+                    cmd.Parameters.AddWithValue("@CreatedByUserId", taskItem.CreatedByUserId);
                     cmd.Parameters.Add("@TaskItemId", SqlDbType.Int);
                     cmd.Parameters["@TaskItemId"].Direction = ParameterDirection.Output;
-
 
                     con.Open();
                     result = cmd.ExecuteNonQuery();
@@ -192,8 +191,6 @@ namespace Repository.Implementation
                         taskItem.TaskItemId = Convert.ToInt32(cmd.Parameters["@TaskItemId"].Value);
                         result = taskItem.TaskItemId;
                     }
-
-
                 }
                 catch (Exception ex)
                 {
@@ -255,8 +252,10 @@ namespace Repository.Implementation
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@TaskItemId", taskItem.TaskItemId);
                     cmd.Parameters.AddWithValue("@TaskId", taskItem.TaskId);
-                    cmd.Parameters.AddWithValue("@Item", taskItem.Item);
+                    cmd.Parameters.AddWithValue("@Description", taskItem.TaskDescription);
                     cmd.Parameters.AddWithValue("@IsComplete", taskItem.IsComplete);
+                    cmd.Parameters.AddWithValue("@UserId", taskItem.UserId);
+                    cmd.Parameters.AddWithValue("@CreatedByUserId", taskItem.CreatedByUserId);
                     cmd.Parameters.AddWithValue("@ModifiedDate", taskItem.ModifiedDate);
 
                     con.Open();

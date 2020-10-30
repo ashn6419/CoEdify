@@ -6,7 +6,7 @@ using System.Text;
 
 namespace DomainModels.Entities
 {
-    public class UserLogin : Role
+    public class UserLogin : User
     {
         public UserLogin()
         {
@@ -20,10 +20,8 @@ namespace DomainModels.Entities
         public string UserEmail { get; set; }
         [Required(ErrorMessage = "Plesae enter password!")]
         public string Password { get; set; }
-        public string[] Roles { get; set; }
-        public new DateTime CreatedDate { get; set; }
-
-        public new DateTime? ModifiedDate { get; set; }
+        public DateTime CreatedDate { get; set; }
+        public DateTime? ModifiedDate { get; set; }
 
     }
 }

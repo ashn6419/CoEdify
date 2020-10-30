@@ -28,14 +28,15 @@ namespace Repository.Implementation
                     cmd.Connection = con;
                     cmd.CommandText = "usp_InsertTask";
                     cmd.CommandType = CommandType.StoredProcedure;
-
                     cmd.Parameters.AddWithValue("@Description", task.Description);
                     cmd.Parameters.AddWithValue("@due_date", task.Due_date);
                     cmd.Parameters.AddWithValue("@IsComplete", task.IsComplete);
                     cmd.Parameters.AddWithValue("@CreatedDate", task.CreatedDate);
+                    cmd.Parameters.AddWithValue("@UserId", task.UserId);
+                    cmd.Parameters.AddWithValue("@TaskTypeId", task.TaskTypeId);
+                    cmd.Parameters.AddWithValue("@CreatedByUserId", task.CreatedByUserId);
                     cmd.Parameters.Add("@TaskId", SqlDbType.Int);
                     cmd.Parameters["@TaskId"].Direction = ParameterDirection.Output;
-
 
                     con.Open();
                     result = cmd.ExecuteNonQuery();
@@ -45,8 +46,6 @@ namespace Repository.Implementation
                         task.TaskId = Convert.ToInt32(cmd.Parameters["@TaskId"].Value);
                         result = task.TaskId;
                     }
-
-
                 }
                 catch (Exception ex)
                 {
@@ -111,7 +110,8 @@ namespace Repository.Implementation
                             while (reader.Read())
                             {
                                 Tasks task = new Tasks();
-                                task.TaskId = Convert.ToInt32(reader["TaskId"]);
+                                if (reader["TaskId"] != DBNull.Value)
+                                    task.TaskId = Convert.ToInt32(reader["TaskId"]);
                                 if (reader["Description"] != DBNull.Value)
                                     task.Description = reader["Description"].ToString();
                                 if (reader["due_date"] != DBNull.Value)
@@ -122,6 +122,11 @@ namespace Repository.Implementation
                                     task.CreatedDate = Convert.ToDateTime(reader["CreatedDate"]);
                                 if (reader["ModifiedDate"] != DBNull.Value)
                                     task.ModifiedDate = Convert.ToDateTime(reader["ModifiedDate"]);
+                                if (reader["UserId"] != DBNull.Value)
+                                    task.UserId = Convert.ToInt32(reader["UserId"]);
+                                if (reader["CreatedByUserId"] != DBNull.Value)
+                                    task.CreatedByUserId = Convert.ToInt32(reader["CreatedByUserId"]);
+
                                 tasks.Add(task);
                             }
                         }
@@ -172,8 +177,11 @@ namespace Repository.Implementation
                                 if (reader["ModifiedDate"] != DBNull.Value)
                                     task.ModifiedDate = Convert.ToDateTime(reader["ModifiedDate"]);
                                 if (reader["IsActive"] != DBNull.Value)
-                                    task.IsActive = Convert.ToBoolean(reader["IsActive"]); 
-
+                                    task.IsActive = Convert.ToBoolean(reader["IsActive"]);
+                                if (reader["UserId"] != DBNull.Value)
+                                    task.UserId = Convert.ToInt32(reader["UserId"]);
+                                if (reader["CreatedByUserId"] != DBNull.Value)
+                                    task.CreatedByUserId = Convert.ToInt32(reader["CreatedByUserId"]);
                             }
                         }
                     }
@@ -190,7 +198,6 @@ namespace Repository.Implementation
                 return task;
             }
         }
-
 
         public int Update(Tasks task)
         {
@@ -209,6 +216,8 @@ namespace Repository.Implementation
                     cmd.Parameters.AddWithValue("@due_date", task.Due_date);
                     cmd.Parameters.AddWithValue("@IsComplete", task.IsComplete);
                     cmd.Parameters.AddWithValue("@ModifiedDate", task.ModifiedDate);
+                    cmd.Parameters.AddWithValue("@UserId", task.UserId);
+                    cmd.Parameters.AddWithValue("@CreatedByUserId", task.CreatedByUserId);
 
                     con.Open();
                     result = cmd.ExecuteNonQuery();

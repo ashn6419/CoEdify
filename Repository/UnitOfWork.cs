@@ -65,7 +65,7 @@ namespace Repository
             get
             {
                 if (_loginHistoryRepo == null)
-                    _loginHistoryRepo = new LoginHistoryRepository(configuration);
+                    _loginHistoryRepo = new LoginAttemptRepository(configuration);
 
                 return _loginHistoryRepo;
             }

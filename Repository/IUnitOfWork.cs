@@ -12,7 +12,7 @@ namespace Repository
         IQualificationRepository qualificationRepo { get; }
         IRoleRepository roleRepo { get; }
         IUserRepository userRepo { get; }
-        ILoginHistoryRepository LoginHistoryRepo { get; }
+        ILoginAttemptRepository LoginAttemptRepo { get; } 
         ITaskRepository TaskRepo { get; }
         ITaskItemRepository TaskItemRepo { get; }
     }

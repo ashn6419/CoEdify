@@ -22,7 +22,7 @@ namespace CEdashbordAPI.Controllers
         [HttpGet]
         public IActionResult GetAllLoginHistories()
         {
-            IEnumerable<LoginHistory> loginHistories = uow.LoginHistoryRepo.GetAll();
+            IEnumerable<LoginAttempt> loginHistories = uow.LoginHistoryRepo.GetAll();
             if (loginHistories.Count() > 0)
                 return Ok(loginHistories);
             else
@@ -34,7 +34,7 @@ namespace CEdashbordAPI.Controllers
         [Route("GetLoginHistoryById/{id}")]
         public IActionResult GetLoginHistoryById(int id = 0)
         {
-            LoginHistory loginHistory = uow.LoginHistoryRepo.GetLoginHisoryById((int)id);
+            LoginAttempt loginHistory = uow.LoginHistoryRepo.GetLoginHisoryById((int)id);
             if (loginHistory.LoginHistoryId > 0)
                 return Ok(loginHistory);
             else
@@ -42,7 +42,7 @@ namespace CEdashbordAPI.Controllers
         }
 
         [HttpPost()]
-        public IActionResult AddLoginHistory([FromBody] LoginHistory loginHistory)
+        public IActionResult AddLoginHistory([FromBody] LoginAttempt loginHistory)
         {
             if (loginHistory == null)
                 return StatusCode(StatusCodes.Status400BadRequest, "parameter is null");

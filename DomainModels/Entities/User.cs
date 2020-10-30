@@ -1,9 +1,10 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.Security.Principal;
 
 namespace DomainModels.Entities
 {
-    public class User : UserLogin
+    public class User
     {
         public User()
         {
@@ -13,22 +14,24 @@ namespace DomainModels.Entities
 
         [Required(ErrorMessage = "Please enter your name!")]
         public string UserName { get; set; }
+        public string Email { get; set; }
         public string Address { get; set; }
+
+        public int CityId { get; set; }
+
+        public int StateId { get; set; }
+
         public DateTime? Date_Of_Birth { get; set; }
 
         [Required(ErrorMessage = "Please enter contact no.")]
         [RegularExpression(@"^[6,7,8,9]\d{9}$", ErrorMessage = "Please Enter Correct Contact")]
         public Int64 ContactNo { get; set; }
-
         public string Gender { get; set; }
 
         [Required(ErrorMessage = "Please select qualification.")]
         public int QualificationId { get; set; }
-
         public DateTime CreateDate { get; set; }
-
         public DateTime? ModificationDate { get; set; }
-
-
+        public int CreatedByUserId { get; set; }
     }
 }

@@ -11,7 +11,7 @@ namespace ApplicationCore
         public string ConStr { get; set; }
         public ConnectionHelper(IConfiguration configuration)
         {
-            _configuration = configuration;           
+            _configuration = configuration;
         }
 
         public string GetConnection()
@@ -19,7 +19,5 @@ namespace ApplicationCore
             ConStr = _configuration.GetConnectionString("DefaultConnection");
             return ConStr;
         }
-
-
     }
 }

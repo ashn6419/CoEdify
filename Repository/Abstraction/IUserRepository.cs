@@ -10,11 +10,9 @@ namespace Repository.Abstraction
     {
         IEnumerable<User> GetAll();
         PagingModel<User> GetAllUsers(int page, int pageSize, string sort, string sortDir);
-
         User GetUserById(int Id);
-
-        User AddUser(User user);
-        int UpdateUser(User user);
+        User AddUser(UserLogin user);  
+        int UpdateUser(UserLogin user,int UserQualificationId);
 
         int DeleteUser(int Id);
 

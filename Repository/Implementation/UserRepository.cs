@@ -21,7 +21,7 @@ namespace Repository.Implementation
             constr = dbCon.GetConnection();
         }
 
-        public User AddUser(User user)
+        public User AddUser(UserLogin user)
         {
             int result = 0;
             using (SqlConnection con = new SqlConnection(constr))
@@ -37,22 +37,27 @@ namespace Repository.Implementation
                     cmd.Parameters.AddWithValue("@UserEmail", user.UserEmail);
                     cmd.Parameters.AddWithValue("@Password", user.Password);
                     cmd.Parameters.AddWithValue("@UserName", user.UserName);
+                    cmd.Parameters.AddWithValue("@Email", user.Email);
+                    cmd.Parameters.AddWithValue("@Gender", user.Gender);
                     cmd.Parameters.AddWithValue("@Date_Of_Birth", user.Date_Of_Birth);
                     cmd.Parameters.AddWithValue("@Address", user.Address);
                     cmd.Parameters.AddWithValue("@ContactNo", user.ContactNo);
                     cmd.Parameters.AddWithValue("@QualificationId", user.QualificationId);
                     cmd.Parameters.AddWithValue("@CreatedDate", user.CreateDate);
+                    cmd.Parameters.AddWithValue("@City", user.CityId);
+                    cmd.Parameters.AddWithValue("@State", user.StateId);
+                    cmd.Parameters.AddWithValue("@CreatedByUserId", user.CreatedByUserId);
                     cmd.Parameters.Add("@UserLoginId", SqlDbType.Int);
                     cmd.Parameters["@UserLoginId"].Direction = ParameterDirection.Output;
 
-                    cmd.Parameters.Add("@userRegistrationId", SqlDbType.Int);
-                    cmd.Parameters["@userRegistrationId"].Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("@userId", SqlDbType.Int);
+                    cmd.Parameters["@userId"].Direction = ParameterDirection.Output;
 
                     result = cmd.ExecuteNonQuery();
                     if (cmd.Parameters["@UserLoginId"].Value != DBNull.Value)
                         user.UserLoginId = Convert.ToInt32(cmd.Parameters["@UserLoginId"].Value);
-                    if (cmd.Parameters["@userRegistrationId"].Value != DBNull.Value)
-                        user.UserId = Convert.ToInt32(cmd.Parameters["@userRegistrationId"].Value);
+                    if (cmd.Parameters["@userId"].Value != DBNull.Value)
+                        user.UserId = Convert.ToInt32(cmd.Parameters["@userId"].Value);
                 }
 
                 catch (Exception ex)
@@ -66,6 +71,8 @@ namespace Repository.Implementation
             }
             return user;
         }
+
+
 
         public int DeleteUser(int Id)
         {
@@ -119,12 +126,18 @@ namespace Repository.Implementation
                                 User user = new User();
                                 user.UserId = Convert.ToInt32(reader["UserRegistrationId"]);
                                 user.UserName = reader["UserName"].ToString();
-                                user.Address = reader["Description"].ToString();
+                                user.Address = reader["Address"].ToString();
                                 user.Date_Of_Birth = Convert.ToDateTime(reader["Date_Of_Birth"]);
                                 user.ContactNo = Convert.ToInt32(reader["ContactNo"]);
                                 user.QualificationId = Convert.ToInt32(reader["QualificationId"]);
-                                user.CreatedDate = Convert.ToDateTime(reader["CreatedDate"]);
-                                user.ModifiedDate = Convert.ToDateTime(reader["ModifiedDate"]);
+                                user.CreateDate = Convert.ToDateTime(reader["CreatedDate"]);
+                                user.ModificationDate = Convert.ToDateTime(reader["ModifiedDate"]);
+                                user.Email = reader["Email"].ToString();
+                                user.Gender = reader["Gender"].ToString();
+                                user.CityId = Convert.ToInt32(reader["CityId"]);
+                                user.StateId = Convert.ToInt32(reader["StateId"]);
+                                user.CreatedByUserId = Convert.ToInt32(reader["CreatedByUserId"]);
+
                                 users.Add(user);
                             }
                         }
@@ -154,7 +167,7 @@ namespace Repository.Implementation
                     cmd.Connection = con;
                     cmd.CommandText = "usp_GetUserById";
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@UserRegistrationId", Id);
+                    cmd.Parameters.AddWithValue("@UserId", Id);
                     con.Open();
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
@@ -162,16 +175,17 @@ namespace Repository.Implementation
                         {
                             while (reader.Read())
                             {
-
-                                user.UserId = Convert.ToInt32(reader["UserRegistrationId"]);
+                                user.UserId = Convert.ToInt32(reader["UserId"]);
                                 user.UserName = reader["UserName"].ToString();
                                 user.Address = reader["Description"].ToString();
                                 user.Date_Of_Birth = Convert.ToDateTime(reader["Date_Of_Birth"]);
                                 user.ContactNo = Convert.ToInt32(reader["ContactNo"]);
                                 user.QualificationId = Convert.ToInt32(reader["QualificationId"]);
-                                user.CreatedDate = Convert.ToDateTime(reader["CreatedDate"]);
-                                user.ModifiedDate = Convert.ToDateTime(reader["ModifiedDate"]);
-
+                                user.Email = reader["Email"].ToString();
+                                user.Gender = reader["Gender"].ToString();
+                                user.CreateDate = Convert.ToDateTime(reader["CreatedDate"]);
+                                user.ModificationDate = Convert.ToDateTime(reader["ModifiedDate"]);
+                                user.CreatedByUserId = Convert.ToInt32(reader["CreatedByUserId"]);
                             }
                         }
                     }
@@ -189,7 +203,7 @@ namespace Repository.Implementation
             }
         }
 
-        public int UpdateUser(User user)
+        public int UpdateUser(UserLogin user, int UserQualificationId)
         {
             int result = 0;
             using (SqlConnection con = new SqlConnection(constr))
@@ -202,26 +216,24 @@ namespace Repository.Implementation
                     cmd.CommandText = "usp_UpdateUser";
                     cmd.CommandType = CommandType.StoredProcedure;
 
-                    cmd.Parameters.AddWithValue("@UserRegistrationId", user.UserId);
+                    cmd.Parameters.AddWithValue("@UserId", user.UserId);
                     cmd.Parameters.AddWithValue("@UserEmail", user.UserEmail);
                     cmd.Parameters.AddWithValue("@Password", user.Password);
                     cmd.Parameters.AddWithValue("@UserName", user.UserName);
+                    cmd.Parameters.AddWithValue("@Email", user.Email);
+                    cmd.Parameters.AddWithValue("@Gender", user.Gender);
                     cmd.Parameters.AddWithValue("@Date_Of_Birth", user.Date_Of_Birth);
                     cmd.Parameters.AddWithValue("@Address", user.Address);
                     cmd.Parameters.AddWithValue("@ContactNo", user.ContactNo);
                     cmd.Parameters.AddWithValue("@QualificationId", user.QualificationId);
                     cmd.Parameters.AddWithValue("@ModifiedDate", user.ModificationDate);
-                    // cmd.Parameters.Add("@UserLoginId", SqlDbType.Int);
-                    // cmd.Parameters["@UserLoginId"].Direction = ParameterDirection.Output;
-
-                    //cmd.Parameters.Add("@userRegistrationId", SqlDbType.Int);
-                    // cmd.Parameters["@userRegistrationId"].Direction = ParameterDirection.Output;
+                    cmd.Parameters.AddWithValue("@City", user.CityId);
+                    cmd.Parameters.AddWithValue("@State", user.StateId);
+                    cmd.Parameters.AddWithValue("@CreatedByUserId", user.CreatedByUserId);
+                    cmd.Parameters.AddWithValue("@UserQualificationId", UserQualificationId);
 
                     result = cmd.ExecuteNonQuery();
-                    //if (cmd.Parameters["@UserLoginId"].Value != DBNull.Value)
-                    //    user.UserLoginId = Convert.ToInt32(cmd.Parameters["@UserLoginId"].Value);
-                    //if (cmd.Parameters["@userRegistrationId"].Value != DBNull.Value)
-                    //    user.UserId = Convert.ToInt32(cmd.Parameters["@userRegistrationId"].Value);
+
                 }
 
                 catch (Exception ex)
@@ -255,22 +267,28 @@ namespace Repository.Implementation
                             while (reader.Read())
                             {
                                 User user = new User();
-                                if (reader["UserRegistrationId"] != DBNull.Value)
-                                    user.UserId = Convert.ToInt32(reader["UserRegistrationId"]);
+                                if (reader["UserId"] != DBNull.Value)
+                                    user.UserId = Convert.ToInt32(reader["UserId"]);
                                 if (reader["UserName"] != DBNull.Value)
                                     user.UserName = reader["UserName"].ToString();
-                                if (reader["Description"] != DBNull.Value)
-                                    user.Address = reader["Description"].ToString();
+                                if (reader["Address"] != DBNull.Value)
+                                    user.Address = reader["Address"].ToString();
                                 if (reader["Date_Of_Birth"] != DBNull.Value)
                                     user.Date_Of_Birth = Convert.ToDateTime(reader["Date_Of_Birth"]);
+                                if (reader["Email"] != DBNull.Value)
+                                    user.Email = reader["Email"].ToString();
+                                if (reader["Gender"] != DBNull.Value)
+                                    user.Gender = reader["Gender"].ToString();
                                 if (reader["ContactNo"] != DBNull.Value)
                                     user.ContactNo = Convert.ToInt32(reader["ContactNo"]);
                                 if (reader["QualificationId"] != DBNull.Value)
                                     user.QualificationId = Convert.ToInt32(reader["QualificationId"]);
                                 if (reader["CreatedDate"] != DBNull.Value)
-                                    user.CreatedDate = Convert.ToDateTime(reader["CreatedDate"]);
+                                    user.CreateDate = Convert.ToDateTime(reader["CreatedDate"]);
                                 if (reader["ModifiedDate"] != DBNull.Value)
-                                    user.ModifiedDate = Convert.ToDateTime(reader["ModifiedDate"]);
+                                    user.ModificationDate = Convert.ToDateTime(reader["ModifiedDate"]);
+                                if (reader["CreatedByUserId"] != DBNull.Value)
+                                    user.CreatedByUserId = Convert.ToInt32(reader["CreatedByUserId"]);
                                 users.Add(user);
                             }
                         }
@@ -312,9 +330,10 @@ namespace Repository.Implementation
                 {
                     con.Close();
                     con.Dispose();
-                }                
+                }
             }
         }
+
     }
 }
 
