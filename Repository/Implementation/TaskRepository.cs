@@ -16,7 +16,6 @@ namespace Repository.Implementation
         {
 
         }
-
         public int Add(Tasks task)
         {
             int result = 0;
@@ -34,6 +33,7 @@ namespace Repository.Implementation
                     cmd.Parameters.AddWithValue("@CreatedDate", task.CreatedDate);
                     cmd.Parameters.AddWithValue("@UserId", task.UserId);
                     cmd.Parameters.AddWithValue("@TaskTypeId", task.TaskTypeId);
+                    cmd.Parameters.AddWithValue("@IsParent", task.IsParent);
                     cmd.Parameters.AddWithValue("@CreatedByUserId", task.CreatedByUserId);
                     cmd.Parameters.Add("@TaskId", SqlDbType.Int);
                     cmd.Parameters["@TaskId"].Direction = ParameterDirection.Output;
@@ -118,6 +118,8 @@ namespace Repository.Implementation
                                     task.Due_date = Convert.ToDateTime(reader["due_date"]);
                                 if (reader["IsComplete"] != DBNull.Value)
                                     task.IsComplete = Convert.ToBoolean(reader["IsComplete"]);
+                                if (reader["IsParent"] != DBNull.Value)
+                                    task.IsParent = Convert.ToBoolean(reader["IsParent"]);
                                 if (reader["CreatedDate"] != DBNull.Value)
                                     task.CreatedDate = Convert.ToDateTime(reader["CreatedDate"]);
                                 if (reader["ModifiedDate"] != DBNull.Value)
@@ -126,7 +128,6 @@ namespace Repository.Implementation
                                     task.UserId = Convert.ToInt32(reader["UserId"]);
                                 if (reader["CreatedByUserId"] != DBNull.Value)
                                     task.CreatedByUserId = Convert.ToInt32(reader["CreatedByUserId"]);
-
                                 tasks.Add(task);
                             }
                         }
@@ -172,6 +173,8 @@ namespace Repository.Implementation
                                     task.Due_date = Convert.ToDateTime(reader["due_date"]);
                                 if (reader["IsComplete"] != DBNull.Value)
                                     task.IsComplete = Convert.ToBoolean(reader["IsComplete"]);
+                                if (reader["IsParent"] != DBNull.Value)
+                                    task.IsParent = Convert.ToBoolean(reader["IsParent"]);
                                 if (reader["CreatedDate"] != DBNull.Value)
                                     task.CreatedDate = Convert.ToDateTime(reader["CreatedDate"]);
                                 if (reader["ModifiedDate"] != DBNull.Value)
@@ -215,6 +218,7 @@ namespace Repository.Implementation
                     cmd.Parameters.AddWithValue("@Description", task.Description);
                     cmd.Parameters.AddWithValue("@due_date", task.Due_date);
                     cmd.Parameters.AddWithValue("@IsComplete", task.IsComplete);
+                    cmd.Parameters.AddWithValue("@IsParent", task.IsParent);
                     cmd.Parameters.AddWithValue("@ModifiedDate", task.ModifiedDate);
                     cmd.Parameters.AddWithValue("@UserId", task.UserId);
                     cmd.Parameters.AddWithValue("@CreatedByUserId", task.CreatedByUserId);

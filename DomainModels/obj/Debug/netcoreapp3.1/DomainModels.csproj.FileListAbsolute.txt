@@ -25,3 +25,12 @@ H:\CodeRepo\DomainModels\obj\Debug\netcoreapp3.1\DomainModels.csproj.CoreCompile
 H:\CodeRepo\DomainModels\obj\Debug\netcoreapp3.1\DomainModels.dll
 H:\CodeRepo\DomainModels\obj\Debug\netcoreapp3.1\DomainModels.pdb
 H:\CodeRepo\DomainModels\obj\Debug\netcoreapp3.1\DomainModels.csprojAssemblyReference.cache
+H:\CodeReopNew\DomainModels\bin\Debug\netcoreapp3.1\DomainModels.deps.json
+H:\CodeReopNew\DomainModels\bin\Debug\netcoreapp3.1\DomainModels.dll
+H:\CodeReopNew\DomainModels\bin\Debug\netcoreapp3.1\DomainModels.pdb
+H:\CodeReopNew\DomainModels\obj\Debug\netcoreapp3.1\DomainModels.csprojAssemblyReference.cache
+H:\CodeReopNew\DomainModels\obj\Debug\netcoreapp3.1\DomainModels.AssemblyInfoInputs.cache
+H:\CodeReopNew\DomainModels\obj\Debug\netcoreapp3.1\DomainModels.AssemblyInfo.cs
+H:\CodeReopNew\DomainModels\obj\Debug\netcoreapp3.1\DomainModels.csproj.CoreCompileInputs.cache
+H:\CodeReopNew\DomainModels\obj\Debug\netcoreapp3.1\DomainModels.dll
+H:\CodeReopNew\DomainModels\obj\Debug\netcoreapp3.1\DomainModels.pdb

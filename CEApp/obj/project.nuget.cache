@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WKud+2SIfHRQ2IsOpnyr0dNedoXgRfiJHbn8UPMkqIkWG6kZHHupwHdAmdbBrPGC/Rth2+y7QsKMBp+MQV3mZQ==",
+  "dgSpecHash": "ZrnfdzGf9YTcwoC/u+HIxhVUgo5fCABY5R5uA1SZXNVFY56wDuHtAPWjF9f0FQBGwPuSeT3LmDNvmdEXlAVArQ==",
   "success": true,
-  "projectFilePath": "H:\\CodeRepo\\CEApp\\CEApp.csproj",
+  "projectFilePath": "H:\\CodeReopNew\\CEApp\\CEApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kumar\\.nuget\\packages\\adminlte2.4.10\\2.4.10\\adminlte2.4.10.2.4.10.nupkg.sha512",
     "C:\\Users\\kumar\\.nuget\\packages\\bootstrap\\3.3.7\\bootstrap.3.3.7.nupkg.sha512",

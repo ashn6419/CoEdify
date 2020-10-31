@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\CodeRepo\\DomainModels\\DomainModels.csproj",
+      "projectUniqueName": "H:\\CodeReopNew\\DomainModels\\DomainModels.csproj",
       "projectName": "DomainModels",
-      "projectPath": "H:\\CodeRepo\\DomainModels\\DomainModels.csproj",
+      "projectPath": "H:\\CodeReopNew\\DomainModels\\DomainModels.csproj",
       "packagesPath": "C:\\Users\\kumar\\.nuget\\packages\\",
-      "outputPath": "H:\\CodeRepo\\DomainModels\\obj\\",
+      "outputPath": "H:\\CodeReopNew\\DomainModels\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",

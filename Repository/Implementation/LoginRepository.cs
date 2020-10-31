@@ -1,12 +1,11 @@
-﻿using ApplicationCore;
-using DomainModels.Entities;
+﻿using DomainModels.Entities;
+using DomainModels.ViewModels;
 using Microsoft.Extensions.Configuration;
 using Repository.Abstraction;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq.Expressions;
 
 namespace Repository.Implementation
 {
@@ -51,9 +50,9 @@ namespace Repository.Implementation
             }
         }
 
-        public UserLogin DoLogin(UserLogin user)
+        public UserLoginModel DoLogin(UserLogin user)
         {
-            UserLogin userLogin = new UserLogin();
+            UserLoginModel userLoginModel = new UserLoginModel();
             using (SqlConnection con = new SqlConnection(constr))
             {
                 try
@@ -73,11 +72,11 @@ namespace Repository.Implementation
                         {
                             while (reader.Read())
                             {
-                                userLogin.UserLoginId = Convert.ToInt32(reader["UserloginId"]);
-                                userLogin.UserEmail = reader["UserEmail"].ToString();
-                                userLogin.Password = reader["Password"].ToString();
-                                userLogin.RoleName = reader["RoleName"].ToString();
-                                user.RoleId = Convert.ToInt32(reader["RoleId"]);
+                                userLoginModel.UserLoginId = Convert.ToInt32(reader["UserloginId"]);
+                                userLoginModel.UserEmail = reader["UserEmail"].ToString();
+                                userLoginModel.Password = reader["Password"].ToString();
+                                userLoginModel.Roles[0] = reader["RoleName"].ToString();  // wrete separe method to get roles or use dataset
+                                userLoginModel.UserId = Convert.ToInt32(reader["UserId"]);
                             }
                         }
                     }
@@ -92,12 +91,12 @@ namespace Repository.Implementation
                     con.Dispose();
                 }
             }
-            return userLogin;
+            return userLoginModel;
         }
 
-        public IEnumerable<UserLogin> GetAll()
+        public IEnumerable<UserLoginModel> GetAll()
         {
-            List<UserLogin> userLogins = new List<UserLogin>();
+            List<UserLoginModel> userLogins = new List<UserLoginModel>();
             using (SqlConnection con = new SqlConnection(constr))
             {
                 try
@@ -113,12 +112,12 @@ namespace Repository.Implementation
                         {
                             while (reader.Read())
                             {
-                                UserLogin userLogin = new UserLogin();
+                                UserLoginModel userLogin = new UserLoginModel();
                                 userLogin.UserLoginId = Convert.ToInt32(reader["UserloginId"]);
                                 userLogin.UserEmail = reader["UserEmail"].ToString();
                                 userLogin.Password = reader["Password"].ToString();
                                 if (reader["RoleName"] != DBNull.Value)
-                                    userLogin.RoleName = reader["RoleName"].ToString();
+                                    userLogin.Roles[0] = reader["RoleName"].ToString();
                                 if (reader["RoleId"] != DBNull.Value)
                                     userLogin.RoleId = Convert.ToInt32(reader["RoleId"]);
                                 userLogins.Add(userLogin);
@@ -139,9 +138,9 @@ namespace Repository.Implementation
             }
         }
 
-        public UserLogin GetUserLogin(string Useremail)
+        public UserLoginModel GetUserLogin(string Useremail)
         {
-            UserLogin userLogin = new UserLogin();
+            UserLoginModel userLoginModel = new UserLoginModel();
             using (SqlConnection con = new SqlConnection(constr))
             {
                 try
@@ -159,13 +158,13 @@ namespace Repository.Implementation
                         {
                             while (reader.Read())
                             {
-                                userLogin.UserLoginId = Convert.ToInt32(reader["UserloginId"]);
-                                userLogin.UserEmail = reader["UserEmail"].ToString();
-                                userLogin.Password = reader["Password"].ToString();
+                                userLoginModel.UserLoginId = Convert.ToInt32(reader["UserloginId"]);
+                                userLoginModel.UserEmail = reader["UserEmail"].ToString();
+                                userLoginModel.Password = reader["Password"].ToString();
                                 if (reader["RoleName"] != DBNull.Value)
-                                    userLogin.RoleName = reader["RoleName"].ToString();
+                                    userLoginModel.Roles[0] = reader["RoleName"].ToString();
                                 if (reader["RoleId"] != DBNull.Value)
-                                    userLogin.RoleId = Convert.ToInt32(reader["RoleId"]);
+                                    userLoginModel.RoleId = Convert.ToInt32(reader["RoleId"]);
                             }
                         }
                     }
@@ -179,13 +178,13 @@ namespace Repository.Implementation
                     con.Close();
                     con.Dispose();
                 }
-                return userLogin;
+                return userLoginModel;
             }
         }
 
-        public UserLogin GetUserLoginById(int Id)
+        public UserLoginModel GetUserLoginById(int Id)
         {
-            UserLogin userLogin = new UserLogin();
+            UserLoginModel userLogin = new UserLoginModel();
             using (SqlConnection con = new SqlConnection(constr))
             {
                 try
@@ -205,9 +204,10 @@ namespace Repository.Implementation
                             {
                                 userLogin.UserLoginId = Convert.ToInt32(reader["UserloginId"]);
                                 userLogin.UserEmail = reader["UserEmail"].ToString();
+
                                 userLogin.Password = reader["Password"].ToString();
                                 if (reader["RoleName"] != DBNull.Value)
-                                    userLogin.RoleName = reader["RoleName"].ToString();
+                                    userLogin.Roles[0] = reader["RoleName"].ToString();
                                 if (reader["RoleId"] != DBNull.Value)
                                     userLogin.RoleId = Convert.ToInt32(reader["RoleId"]);
                             }

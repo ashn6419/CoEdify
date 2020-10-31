@@ -119,3 +119,8 @@ H:\CodeRepo\CEdashbordAPI\obj\Debug\netcoreapp3.1\staticwebassets\CEdashbordAPI.
 H:\CodeRepo\CEdashbordAPI\obj\Debug\netcoreapp3.1\CEdashbordAPI.dll
 H:\CodeRepo\CEdashbordAPI\obj\Debug\netcoreapp3.1\CEdashbordAPI.pdb
 H:\CodeRepo\CEdashbordAPI\obj\Debug\netcoreapp3.1\CEdashbordAPI.genruntimeconfig.cache
+H:\CodeReopNew\CEdashbordAPI\obj\Debug\netcoreapp3.1\CEdashbordAPI.csprojAssemblyReference.cache
+H:\CodeReopNew\CEdashbordAPI\obj\Debug\netcoreapp3.1\CEdashbordAPI.AssemblyInfoInputs.cache
+H:\CodeReopNew\CEdashbordAPI\obj\Debug\netcoreapp3.1\CEdashbordAPI.AssemblyInfo.cs
+H:\CodeReopNew\CEdashbordAPI\obj\Debug\netcoreapp3.1\CEdashbordAPI.csproj.CoreCompileInputs.cache
+H:\CodeReopNew\CEdashbordAPI\obj\Debug\netcoreapp3.1\CEdashbordAPI.MvcApplicationPartsAssemblyInfo.cache

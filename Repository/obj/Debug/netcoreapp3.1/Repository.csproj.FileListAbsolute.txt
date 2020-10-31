@@ -40,3 +40,7 @@ H:\CodeRepo\Repository\obj\Debug\netcoreapp3.1\Repository.csproj.CoreCompileInpu
 H:\CodeRepo\Repository\obj\Debug\netcoreapp3.1\Repository.csproj.CopyComplete
 H:\CodeRepo\Repository\obj\Debug\netcoreapp3.1\Repository.dll
 H:\CodeRepo\Repository\obj\Debug\netcoreapp3.1\Repository.pdb
+H:\CodeReopNew\Repository\obj\Debug\netcoreapp3.1\Repository.csprojAssemblyReference.cache
+H:\CodeReopNew\Repository\obj\Debug\netcoreapp3.1\Repository.AssemblyInfoInputs.cache
+H:\CodeReopNew\Repository\obj\Debug\netcoreapp3.1\Repository.AssemblyInfo.cs
+H:\CodeReopNew\Repository\obj\Debug\netcoreapp3.1\Repository.csproj.CoreCompileInputs.cache

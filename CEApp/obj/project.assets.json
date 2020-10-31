@@ -6459,11 +6459,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\CodeRepo\\CEApp\\CEApp.csproj",
+      "projectUniqueName": "H:\\CodeReopNew\\CEApp\\CEApp.csproj",
       "projectName": "CEApp",
-      "projectPath": "H:\\CodeRepo\\CEApp\\CEApp.csproj",
+      "projectPath": "H:\\CodeReopNew\\CEApp\\CEApp.csproj",
       "packagesPath": "C:\\Users\\kumar\\.nuget\\packages\\",
-      "outputPath": "H:\\CodeRepo\\CEApp\\obj\\",
+      "outputPath": "H:\\CodeReopNew\\CEApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6479,8 +6479,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "H:\\CodeRepo\\DomainModels\\DomainModels.csproj": {
-              "projectPath": "H:\\CodeRepo\\DomainModels\\DomainModels.csproj"
+            "H:\\CodeReopNew\\DomainModels\\DomainModels.csproj": {
+              "projectPath": "H:\\CodeReopNew\\DomainModels\\DomainModels.csproj"
             }
           }
         }

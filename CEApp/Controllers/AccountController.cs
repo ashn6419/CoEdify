@@ -7,6 +7,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using DomainModels.Entities;
+using DomainModels.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
@@ -38,12 +39,12 @@ namespace CEApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                UserLogin user = GetUserLogin(loginModel);
+                UserLoginModel user = GetUserLogin(loginModel);
 
                 if (user.UserLoginId > 0)
                 {
 
-                    if (user.RoleName.Contains("Admin"))
+                    if (user.Roles.Contains("Admin"))
                     {
                         return RedirectToAction("Dashboard", "Dashboard", new { @area = "Admin" });
                     }
@@ -56,10 +57,10 @@ namespace CEApp.Controllers
             return View();
         }
 
-        private UserLogin GetUserLogin(UserLogin model)
+        private UserLoginModel GetUserLogin(UserLogin model)
         {
             bool boo = false;
-            UserLogin userLogin = new UserLogin();
+            UserLoginModel userLogin = new UserLoginModel();
             try
             {
                 string str = JsonConvert.SerializeObject(model);
@@ -72,12 +73,12 @@ namespace CEApp.Controllers
                     if (httpResponse.StatusCode == HttpStatusCode.OK)
                     {
                         string outstr = httpResponse.Content.ReadAsStringAsync().Result;
-                        userLogin = JsonConvert.DeserializeObject<UserLogin>(outstr);
+                        userLogin = JsonConvert.DeserializeObject<UserLoginModel>(outstr);
                     }
                     if (httpResponse.StatusCode == HttpStatusCode.NotFound)
                     {
                         string outstr = httpResponse.Content.ReadAsStringAsync().Result;
-                        userLogin = JsonConvert.DeserializeObject<UserLogin>(outstr);
+                        userLogin = JsonConvert.DeserializeObject<UserLoginModel>(outstr);
                     }
                 }
             }

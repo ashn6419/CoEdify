@@ -806,3 +806,11 @@ H:\CodeRepo\CEApp\obj\Debug\netcoreapp3.1\staticwebassets\CEApp.StaticWebAssets.
 H:\CodeRepo\CEApp\obj\Debug\netcoreapp3.1\CEApp.dll
 H:\CodeRepo\CEApp\obj\Debug\netcoreapp3.1\CEApp.pdb
 H:\CodeRepo\CEApp\obj\Debug\netcoreapp3.1\CEApp.genruntimeconfig.cache
+H:\CodeReopNew\CEApp\obj\Debug\netcoreapp3.1\CEApp.csprojAssemblyReference.cache
+H:\CodeReopNew\CEApp\obj\Debug\netcoreapp3.1\CEApp.AssemblyInfoInputs.cache
+H:\CodeReopNew\CEApp\obj\Debug\netcoreapp3.1\CEApp.AssemblyInfo.cs
+H:\CodeReopNew\CEApp\obj\Debug\netcoreapp3.1\CEApp.csproj.CoreCompileInputs.cache
+H:\CodeReopNew\CEApp\obj\Debug\netcoreapp3.1\CEApp.MvcApplicationPartsAssemblyInfo.cs
+H:\CodeReopNew\CEApp\obj\Debug\netcoreapp3.1\CEApp.MvcApplicationPartsAssemblyInfo.cache
+H:\CodeReopNew\CEApp\obj\Debug\netcoreapp3.1\CEApp.RazorAssemblyInfo.cache
+H:\CodeReopNew\CEApp\obj\Debug\netcoreapp3.1\CEApp.RazorAssemblyInfo.cs

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\CodeRepo\\CEApp\\CEApp.csproj": {}
+    "H:\\CodeReopNew\\CEApp\\CEApp.csproj": {}
   },
   "projects": {
-    "H:\\CodeRepo\\CEApp\\CEApp.csproj": {
+    "H:\\CodeReopNew\\CEApp\\CEApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\CodeRepo\\CEApp\\CEApp.csproj",
+        "projectUniqueName": "H:\\CodeReopNew\\CEApp\\CEApp.csproj",
         "projectName": "CEApp",
-        "projectPath": "H:\\CodeRepo\\CEApp\\CEApp.csproj",
+        "projectPath": "H:\\CodeReopNew\\CEApp\\CEApp.csproj",
         "packagesPath": "C:\\Users\\kumar\\.nuget\\packages\\",
-        "outputPath": "H:\\CodeRepo\\CEApp\\obj\\",
+        "outputPath": "H:\\CodeReopNew\\CEApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,8 +27,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "H:\\CodeRepo\\DomainModels\\DomainModels.csproj": {
-                "projectPath": "H:\\CodeRepo\\DomainModels\\DomainModels.csproj"
+              "H:\\CodeReopNew\\DomainModels\\DomainModels.csproj": {
+                "projectPath": "H:\\CodeReopNew\\DomainModels\\DomainModels.csproj"
               }
             }
           }
@@ -89,14 +89,14 @@
         }
       }
     },
-    "H:\\CodeRepo\\DomainModels\\DomainModels.csproj": {
+    "H:\\CodeReopNew\\DomainModels\\DomainModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\CodeRepo\\DomainModels\\DomainModels.csproj",
+        "projectUniqueName": "H:\\CodeReopNew\\DomainModels\\DomainModels.csproj",
         "projectName": "DomainModels",
-        "projectPath": "H:\\CodeRepo\\DomainModels\\DomainModels.csproj",
+        "projectPath": "H:\\CodeReopNew\\DomainModels\\DomainModels.csproj",
         "packagesPath": "C:\\Users\\kumar\\.nuget\\packages\\",
-        "outputPath": "H:\\CodeRepo\\DomainModels\\obj\\",
+        "outputPath": "H:\\CodeReopNew\\DomainModels\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -5128,11 +5128,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\CodeRepo\\CEdashbordAPI\\CEdashbordAPI.csproj",
+      "projectUniqueName": "H:\\CodeReopNew\\CEdashbordAPI\\CEdashbordAPI.csproj",
       "projectName": "CEdashbordAPI",
-      "projectPath": "H:\\CodeRepo\\CEdashbordAPI\\CEdashbordAPI.csproj",
+      "projectPath": "H:\\CodeReopNew\\CEdashbordAPI\\CEdashbordAPI.csproj",
       "packagesPath": "C:\\Users\\kumar\\.nuget\\packages\\",
-      "outputPath": "H:\\CodeRepo\\CEdashbordAPI\\obj\\",
+      "outputPath": "H:\\CodeReopNew\\CEdashbordAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5148,14 +5148,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "H:\\CodeRepo\\ApplicationCore\\ApplicationCore.csproj": {
-              "projectPath": "H:\\CodeRepo\\ApplicationCore\\ApplicationCore.csproj"
+            "H:\\CodeReopNew\\ApplicationCore\\ApplicationCore.csproj": {
+              "projectPath": "H:\\CodeReopNew\\ApplicationCore\\ApplicationCore.csproj"
             },
-            "H:\\CodeRepo\\DomainModels\\DomainModels.csproj": {
-              "projectPath": "H:\\CodeRepo\\DomainModels\\DomainModels.csproj"
+            "H:\\CodeReopNew\\DomainModels\\DomainModels.csproj": {
+              "projectPath": "H:\\CodeReopNew\\DomainModels\\DomainModels.csproj"
             },
-            "H:\\CodeRepo\\Repository\\Repository.csproj": {
-              "projectPath": "H:\\CodeRepo\\Repository\\Repository.csproj"
+            "H:\\CodeReopNew\\Repository\\Repository.csproj": {
+              "projectPath": "H:\\CodeReopNew\\Repository\\Repository.csproj"
             }
           }
         }

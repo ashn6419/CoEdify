@@ -70,11 +70,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\CodeRepo\\ApplicationCore\\ApplicationCore.csproj",
+      "projectUniqueName": "H:\\CodeReopNew\\ApplicationCore\\ApplicationCore.csproj",
       "projectName": "ApplicationCore",
-      "projectPath": "H:\\CodeRepo\\ApplicationCore\\ApplicationCore.csproj",
+      "projectPath": "H:\\CodeReopNew\\ApplicationCore\\ApplicationCore.csproj",
       "packagesPath": "C:\\Users\\kumar\\.nuget\\packages\\",
-      "outputPath": "H:\\CodeRepo\\ApplicationCore\\obj\\",
+      "outputPath": "H:\\CodeReopNew\\ApplicationCore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",

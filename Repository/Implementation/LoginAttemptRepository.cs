@@ -16,7 +16,6 @@ namespace Repository.Implementation
 
         public int AddLoginAttempt(LoginAttempt loginAttempt)
         {
-
             int result = 0;
             using (SqlConnection con = new SqlConnection(constr))
             {

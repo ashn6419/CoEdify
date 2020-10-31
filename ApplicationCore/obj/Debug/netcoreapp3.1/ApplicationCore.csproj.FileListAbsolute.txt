@@ -25,3 +25,12 @@ H:\CodeRepo\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.AssemblyInfo
 H:\CodeRepo\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.csproj.CoreCompileInputs.cache
 H:\CodeRepo\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.dll
 H:\CodeRepo\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.pdb
+H:\CodeReopNew\ApplicationCore\bin\Debug\netcoreapp3.1\ApplicationCore.deps.json
+H:\CodeReopNew\ApplicationCore\bin\Debug\netcoreapp3.1\ApplicationCore.dll
+H:\CodeReopNew\ApplicationCore\bin\Debug\netcoreapp3.1\ApplicationCore.pdb
+H:\CodeReopNew\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.csprojAssemblyReference.cache
+H:\CodeReopNew\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.AssemblyInfoInputs.cache
+H:\CodeReopNew\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.AssemblyInfo.cs
+H:\CodeReopNew\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.csproj.CoreCompileInputs.cache
+H:\CodeReopNew\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.dll
+H:\CodeReopNew\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.pdb
