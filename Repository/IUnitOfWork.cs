@@ -12,8 +12,11 @@ namespace Repository
         IQualificationRepository qualificationRepo { get; }
         IRoleRepository roleRepo { get; }
         IUserRepository userRepo { get; }
-        ILoginAttemptRepository LoginAttemptRepo { get; } 
+        ILoginAttemptRepository LoginAttemptRepo { get; }
         ITaskRepository TaskRepo { get; }
-        ITaskItemRepository TaskItemRepo { get; }
+        ///   ITaskItemRepository TaskItemRepo { get; }
+
+
+
     }
 }

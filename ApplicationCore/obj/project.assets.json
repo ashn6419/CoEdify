@@ -70,11 +70,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\CodeReopNew\\ApplicationCore\\ApplicationCore.csproj",
+      "projectUniqueName": "G:\\CodeFromGit\\ApplicationCore\\ApplicationCore.csproj",
       "projectName": "ApplicationCore",
-      "projectPath": "H:\\CodeReopNew\\ApplicationCore\\ApplicationCore.csproj",
+      "projectPath": "G:\\CodeFromGit\\ApplicationCore\\ApplicationCore.csproj",
       "packagesPath": "C:\\Users\\kumar\\.nuget\\packages\\",
-      "outputPath": "H:\\CodeReopNew\\ApplicationCore\\obj\\",
+      "outputPath": "G:\\CodeFromGit\\ApplicationCore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -89,6 +89,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -100,6 +101,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": {
             "target": "Package",
@@ -121,7 +123,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

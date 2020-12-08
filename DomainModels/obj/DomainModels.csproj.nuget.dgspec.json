@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\CodeReopNew\\DomainModels\\DomainModels.csproj": {}
+    "G:\\CodeFromGit\\DomainModels\\DomainModels.csproj": {}
   },
   "projects": {
-    "H:\\CodeReopNew\\DomainModels\\DomainModels.csproj": {
+    "G:\\CodeFromGit\\DomainModels\\DomainModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\CodeReopNew\\DomainModels\\DomainModels.csproj",
+        "projectUniqueName": "G:\\CodeFromGit\\DomainModels\\DomainModels.csproj",
         "projectName": "DomainModels",
-        "projectPath": "H:\\CodeReopNew\\DomainModels\\DomainModels.csproj",
+        "projectPath": "G:\\CodeFromGit\\DomainModels\\DomainModels.csproj",
         "packagesPath": "C:\\Users\\kumar\\.nuget\\packages\\",
-        "outputPath": "H:\\CodeReopNew\\DomainModels\\obj\\",
+        "outputPath": "G:\\CodeFromGit\\DomainModels\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -26,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,6 +38,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -52,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

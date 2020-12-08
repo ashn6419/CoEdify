@@ -548,11 +548,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\CodeReopNew\\Repository\\Repository.csproj",
+      "projectUniqueName": "G:\\CodeFromGit\\Repository\\Repository.csproj",
       "projectName": "Repository",
-      "projectPath": "H:\\CodeReopNew\\Repository\\Repository.csproj",
+      "projectPath": "G:\\CodeFromGit\\Repository\\Repository.csproj",
       "packagesPath": "C:\\Users\\kumar\\.nuget\\packages\\",
-      "outputPath": "H:\\CodeReopNew\\Repository\\obj\\",
+      "outputPath": "G:\\CodeFromGit\\Repository\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -567,12 +567,13 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "H:\\CodeReopNew\\ApplicationCore\\ApplicationCore.csproj": {
-              "projectPath": "H:\\CodeReopNew\\ApplicationCore\\ApplicationCore.csproj"
+            "G:\\CodeFromGit\\ApplicationCore\\ApplicationCore.csproj": {
+              "projectPath": "G:\\CodeFromGit\\ApplicationCore\\ApplicationCore.csproj"
             },
-            "H:\\CodeReopNew\\DomainModels\\DomainModels.csproj": {
-              "projectPath": "H:\\CodeReopNew\\DomainModels\\DomainModels.csproj"
+            "G:\\CodeFromGit\\DomainModels\\DomainModels.csproj": {
+              "projectPath": "G:\\CodeFromGit\\DomainModels\\DomainModels.csproj"
             }
           }
         }
@@ -585,6 +586,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": {
             "target": "Package",
@@ -610,7 +612,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

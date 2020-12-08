@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9GIzPymaohGmUcK5rc7jPPKeQOOOzImSTLV59zjc77UZwmfCkw8+1AuzUcWsc6uDU/3zzMkLxzfQ26SUvExWKQ==",
+  "dgSpecHash": "v6fN6zkjkwTjQPGLHB42SSi0lLTBykbHSGxPkDjvhhmcI17ul7wkKiwmcx7ofZv03iCBpH4nxNheYHpru0ycqg==",
   "success": true,
-  "projectFilePath": "H:\\CodeReopNew\\ApplicationCore\\ApplicationCore.csproj",
+  "projectFilePath": "G:\\CodeFromGit\\ApplicationCore\\ApplicationCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kumar\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.9\\microsoft.extensions.configuration.abstractions.3.1.9.nupkg.sha512",
     "C:\\Users\\kumar\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.9\\microsoft.extensions.primitives.3.1.9.nupkg.sha512"
